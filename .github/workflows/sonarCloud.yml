@@ -21,14 +21,12 @@ jobs:
       uses: actions/setup-java@v3
       with:
         distribution: temurin
-        java-version: 17   # ✅ Fix: utiliser Java 17
+        java-version: 17   
         cache: maven
 
-    # 3️⃣ Build + tests + couverture
     - name: Build and run tests
       run: mvn clean verify
 
-    # 4️⃣ Analyse SonarCloud
     - name: SonarCloud Scan
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

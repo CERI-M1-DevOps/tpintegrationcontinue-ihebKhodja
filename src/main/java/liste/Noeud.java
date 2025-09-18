@@ -4,9 +4,8 @@ public class Noeud {
     private Object element;
     private Noeud suivant;
 
-    // Constructeur prend un Object pour être compatible avec ListeSimple
-    public Noeud(Object element, Noeud suivant) {
-        this.element = element;
+    public Noeud(int e, Noeud suivant) {
+        element = e;
         this.suivant = suivant;
     }
 
@@ -26,7 +25,6 @@ public class Noeud {
         this.suivant = suivant;
     }
 
-    @Override
     public String toString() {
         return "Noeud(" + element + ")";
     }
